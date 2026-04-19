@@ -2,260 +2,991 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>摄影师Am阿木木｜木星记studio 创始人</title>
-  <meta name="description" content="摄影师Am阿木木，木星记studio创始人，主要拍婚礼跟拍、领证跟拍、订婚和答谢宴。微信：muxingjistudio，小红书：木星记Am阿木木，电话：18640167950。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>沈阳婚礼摄影师 Am阿木木｜婚礼跟拍・领证跟拍・木星记studio</title>
+  <meta
+    name="description"
+    content="木星记studio创始人Am阿木木，提供沈阳婚礼跟拍、领证跟拍、订婚与答谢宴记录，也可承接异地拍摄。注重真实情绪、人物关系与画面质感，也重视婚礼当天的拍摄体验与省心度。"
+  />
+  <link rel="canonical" href="https://mumu668807-creator.github.io/amumu-wedding/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="沈阳婚礼摄影师 Am阿木木｜婚礼跟拍・领证跟拍・木星记studio" />
+  <meta
+    property="og:description"
+    content="木星记studio创始人Am阿木木，提供沈阳婚礼跟拍、领证跟拍、订婚与答谢宴记录，也可承接异地拍摄。真实、自然、有情绪，也更省心。"
+  />
+  <meta property="og:url" content="https://mumu668807-creator.github.io/amumu-wedding/" />
+  <meta property="og:image" content="https://mumu668807-creator.github.io/amumu-wedding/images/cover.jpg" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="沈阳婚礼摄影师 Am阿木木｜婚礼跟拍・领证跟拍・木星记studio" />
+  <meta
+    name="twitter:description"
+    content="婚礼跟拍、领证跟拍、订婚和答谢宴记录。真实、自然、有情绪，也更省心。"
+  />
+  <meta name="twitter:image" content="https://mumu668807-creator.github.io/amumu-wedding/images/cover.jpg" />
+  <meta name="theme-color" content="#f6f3ee" />
+
   <style>
     * { box-sizing: border-box; }
+
+    :root {
+      --bg: #f6f3ee;
+      --card: rgba(255,255,255,0.82);
+      --card-solid: #ffffff;
+      --text: #201d19;
+      --muted: #655e55;
+      --soft: #8a8175;
+      --line: #e8dfd3;
+      --line-strong: #ddd2c4;
+      --accent: #1f1b17;
+      --accent-2: #7a6858;
+      --shadow: 0 18px 40px rgba(34, 28, 22, 0.06);
+      --radius-xl: 30px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --container: 1180px;
+    }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
-      color: #222;
-      background: #f6f3ee;
-      line-height: 1.7;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.55), transparent 30%),
+        linear-gradient(180deg, #f8f5f0 0%, #f6f3ee 100%);
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
     .container {
-      width: min(1120px, calc(100% - 32px));
+      width: min(var(--container), calc(100% - 32px));
       margin: 0 auto;
     }
-    .hero {
-      padding: 56px 0 32px;
+
+    .topbar-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(246, 243, 238, 0.72);
+      border-bottom: 1px solid rgba(232, 223, 211, 0.7);
     }
+
+    .topbar {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+    }
+
+    .brand {
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--soft);
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      font-size: 13px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      line-height: 1;
+      white-space: nowrap;
+      transition: 0.2s ease;
+    }
+
+    .nav a:hover {
+      background: #fff;
+      border-color: var(--line-strong);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 34px 0 24px;
+    }
+
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+      gap: 26px;
       align-items: center;
     }
+
     .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid var(--line);
+      color: var(--soft);
       font-size: 12px;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #8a8175;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
+
     h1 {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.15;
       margin: 0;
-      font-weight: 600;
+      font-size: clamp(34px, 5.4vw, 64px);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.03em;
     }
+
     .lead {
+      margin: 18px 0 0;
       font-size: 17px;
       color: #5f584f;
-      margin-top: 20px;
-      max-width: 560px;
+      max-width: 640px;
     }
-    .contact-inline {
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 14px;
+      color: #534d45;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .hero-points div {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 16px;
+      color: #534d45;
+      font-size: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 22px;
     }
-    .pill {
-      display: inline-block;
-      padding: 10px 14px;
-      background: #fff;
-      border: 1px solid #e5ddd2;
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 18px;
       border-radius: 999px;
+      font-size: 15px;
+      font-weight: 650;
+      border: 1px solid transparent;
+      transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(31, 27, 23, 0.16);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.86);
+      color: var(--accent);
+      border-color: var(--line);
+    }
+
+    .hero-contact {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .hero-contact .pill {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 13px 14px;
+      min-height: 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: var(--shadow);
+    }
+
+    .pill-label {
+      font-size: 12px;
+      color: var(--soft);
+      margin-bottom: 4px;
+    }
+
+    .pill-value {
       font-size: 14px;
+      font-weight: 650;
+      color: #51493f;
+      word-break: break-all;
     }
+
     .hero-image {
-      background: #fff;
-      border-radius: 28px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
       padding: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      box-shadow: var(--shadow);
     }
+
     .hero-image img {
-      border-radius: 20px;
+      border-radius: 22px;
       aspect-ratio: 4 / 5;
       object-fit: cover;
     }
+
     .section {
-      padding: 28px 0 16px;
+      padding: 22px 0 12px;
     }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 16px;
+    }
+
+    .section-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: 8px;
+    }
+
     .card {
-      background: #fff;
-      border: 1px solid #e9e1d6;
-      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
       padding: 28px;
+      box-shadow: var(--shadow);
     }
+
     h2 {
-      margin: 0 0 14px;
-      font-size: 28px;
-      font-weight: 600;
+      margin: 0 0 12px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
     }
-    .muted { color: #6b645b; }
-    .service-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 16px;
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.32;
+      letter-spacing: -0.01em;
     }
-    .service-item {
-      padding: 12px 16px;
-      background: #fff;
-      border: 1px solid #e9e1d6;
-      border-radius: 16px;
-      font-size: 15px;
+
+    .muted {
+      color: var(--muted);
     }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .service-card,
+    .point-card,
+    .faq-item,
+    .process-card,
+    .contact-card,
+    .trust-card,
+    .fit-card,
+    .gallery-copy,
+    .consult-card,
+    .proof-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .service-card p,
+    .point-card p,
+    .faq-item p,
+    .process-card p,
+    .contact-card p,
+    .trust-card p,
+    .fit-card p,
+    .gallery-copy p,
+    .consult-card p,
+    .proof-card p {
+      margin: 0;
+      color: #655e55;
+    }
+
+    .service-tagline,
+    .small-label {
+      font-size: 13px;
+      color: var(--soft);
+      margin-bottom: 8px;
+    }
+
+    .mini-list {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: #5f584f;
+    }
+
+    .mini-list li + li {
+      margin-top: 7px;
+    }
+
+    .quote {
+      font-size: 18px;
+      line-height: 1.85;
+      color: #4f493f;
+    }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
     }
+
     .gallery-item {
       overflow: hidden;
-      border-radius: 22px;
+      border-radius: 24px;
       background: #fff;
-      border: 1px solid #e9e1d6;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
     }
+
     .gallery-item img {
       aspect-ratio: 4 / 5;
       object-fit: cover;
+      transition: transform 0.35s ease;
     }
+
+    .gallery-item:hover img {
+      transform: scale(1.02);
+    }
+
+    .gallery-copy {
+      margin-top: 14px;
+    }
+
     .contact-box {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 20px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
     }
-    .contact-card {
-      background: #fff;
-      border: 1px solid #e9e1d6;
-      border-radius: 22px;
-      padding: 20px;
-    }
+
     .contact-label {
       font-size: 13px;
-      color: #8a8175;
+      color: var(--soft);
       margin-bottom: 8px;
     }
+
     .contact-value {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 700;
       word-break: break-all;
+      line-height: 1.6;
     }
+
+    .contact-note {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.9;
+      color: #4f493f;
+    }
+
+    .footer-cta {
+      margin-top: 8px;
+    }
+
     footer {
-      padding: 36px 0 48px;
-      color: #8a8175;
+      padding: 34px 0 92px;
+      color: var(--soft);
       font-size: 14px;
     }
-    @media (max-width: 900px) {
+
+    .sticky-mobile-cta {
+      display: none;
+    }
+
+    .desktop-only { display: block; }
+    .mobile-only { display: none; }
+
+    @media (max-width: 980px) {
+      .container {
+        width: min(100% - 24px, 760px);
+      }
+
       .hero-grid,
+      .grid-2,
+      .grid-3,
       .contact-box,
-      .gallery {
+      .gallery,
+      .hero-contact {
         grid-template-columns: 1fr;
       }
-      .hero { padding-top: 28px; }
-      .card { padding: 22px; }
+
+      .topbar {
+        min-height: auto;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 10px 0 12px;
+      }
+
+      .nav {
+        gap: 8px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding-bottom: 2px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .nav::-webkit-scrollbar { display: none; }
+
+      .nav a {
+        flex: 0 0 auto;
+      }
+
+      .hero {
+        padding-top: 16px;
+      }
+
+      .hero-grid {
+        gap: 18px;
+      }
+
+      .hero-image {
+        order: -1;
+        padding: 10px;
+        border-radius: 22px;
+      }
+
+      .hero-image img {
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 33px;
+        line-height: 1.14;
+      }
+
+      .lead {
+        font-size: 15.5px;
+        line-height: 1.82;
+        margin-top: 14px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      .card,
+      .service-card,
+      .point-card,
+      .faq-item,
+      .process-card,
+      .contact-card,
+      .trust-card,
+      .fit-card,
+      .gallery-copy,
+      .consult-card,
+      .proof-card {
+        padding: 18px;
+        border-radius: 18px;
+      }
+
+      .hero-points div {
+        font-size: 14.5px;
+        padding: 13px 14px;
+        border-radius: 16px;
+      }
+
+      .cta-row {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+        min-height: 50px;
+      }
+
+      .hero-contact .pill {
+        min-height: auto;
+        border-radius: 16px;
+      }
+
+      .gallery-item img {
+        aspect-ratio: 4 / 5;
+      }
+
+      .sticky-mobile-cta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: calc(12px + env(safe-area-inset-bottom));
+        z-index: 50;
+        padding: 10px;
+        background: rgba(246,243,238,0.93);
+        backdrop-filter: blur(14px);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      }
+
+      .sticky-mobile-cta .btn {
+        min-height: 46px;
+        font-size: 14px;
+        padding: 0 12px;
+      }
+
+      footer {
+        padding-bottom: 122px;
+      }
+
+      .desktop-only { display: none; }
+      .mobile-only { display: block; }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "木星记studio",
+    "alternateName": "摄影师Am阿木木",
+    "url": "https://mumu668807-creator.github.io/amumu-wedding/",
+    "image": "https://mumu668807-creator.github.io/amumu-wedding/images/cover.jpg",
+    "description": "木星记studio创始人Am阿木木，提供沈阳婚礼跟拍、领证跟拍、订婚与答谢宴记录，也可承接异地拍摄。",
+    "telephone": "+86-18640167950",
+    "areaServed": ["沈阳", "辽宁", "异地拍摄"],
+    "founder": {
+      "@type": "Person",
+      "name": "Am阿木木"
+    }
+  }
+  </script>
 </head>
 <body>
-  <div class="container">
+  <div class="topbar-wrap">
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          <div class="brand-title">木星记studio</div>
+          <div class="brand-sub">摄影师 Am阿木木 · 沈阳婚礼摄影 / 领证跟拍 / 异地可接</div>
+        </div>
+
+        <nav class="nav" aria-label="页面导航">
+          <a href="#about">关于我</a>
+          <a href="#services">拍摄内容</a>
+          <a href="#why">为什么选我</a>
+          <a href="#fit">适合谁</a>
+          <a href="#process">拍摄流程</a>
+          <a href="#works">部分作品</a>
+          <a href="#faq">常见问题</a>
+          <a href="#contact">联系我</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="eyebrow">木星记studio · 创始人 / 摄影师Am阿木木</div>
-          <h1>摄影师Am阿木木｜木星记studio 创始人</h1>
+          <div class="eyebrow">木星记studio · 创始人 / 沈阳婚礼摄影师 Am阿木木</div>
+
+          <h1>沈阳婚礼摄影师 Am阿木木｜自然、有情绪，也更省心的婚礼记录</h1>
+
           <p class="lead">
-            我是摄影师Am阿木木，也是木星记studio创始人。主要拍婚礼跟拍、领证跟拍、订婚和答谢宴，喜欢把婚礼里的情绪、关系和画面质感一起留下来。
+            我是摄影师Am阿木木，也是木星记studio创始人。主要提供沈阳婚礼跟拍、领证跟拍、订婚和答谢宴记录，也可承接异地拍摄。比起只拍完整流程，我更在意婚礼里的真实情绪、人物关系、现场氛围和照片质感。
           </p>
-          <div class="contact-inline">
-            <span class="pill">微信：muxingjistudio</span>
-            <span class="pill">小红书：木星记Am阿木木</span>
-            <span class="pill">电话：18640167950</span>
+
+          <div class="hero-tags">
+            <span class="tag">婚礼跟拍</span>
+            <span class="tag">领证跟拍</span>
+            <span class="tag">订婚 / 答谢宴</span>
+            <span class="tag">胶片记录</span>
+            <span class="tag">异地可接</span>
+          </div>
+
+          <div class="hero-points">
+            <div>适合不喜欢太重摆拍、想拍得更自然的新人</div>
+            <div>拍摄前会提前沟通流程、场地和重点人物，让婚礼当天更顺</div>
+            <div>不只是交付照片，也尽量让你在婚礼当天更稳、更轻松</div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">查看联系方式</a>
+            <a class="btn btn-secondary" href="#works">先看部分作品</a>
+          </div>
+
+          <div class="hero-contact">
+            <div class="pill">
+              <div class="pill-label">微信</div>
+              <div class="pill-value">muxingjistudio</div>
+            </div>
+            <div class="pill">
+              <div class="pill-label">小红书</div>
+              <div class="pill-value">木星记Am阿木木</div>
+            </div>
+            <div class="pill">
+              <div class="pill-label">电话</div>
+              <div class="pill-value">18640167950</div>
+            </div>
           </div>
         </div>
+
         <div class="hero-image">
-          <img src="images/cover.jpg" alt="摄影师Am阿木木婚礼摄影作品主图" />
+          <img src="images/cover.jpg" alt="沈阳婚礼摄影师Am阿木木作品主图，新人在婚礼现场的自然互动瞬间" />
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="about">
       <div class="card">
-        <h2>简单介绍一下我</h2>
-        <p class="muted">主要拍婚礼跟拍、领证跟拍、订婚和答谢宴。</p>
-        <p class="muted">我更在意真实情绪、画面质感，以及拍摄当天的整体体验。</p>
-        <p class="muted">比起只交付照片，我也会提前和新人沟通流程、场地和拍摄重点，让婚礼拍摄这件事更稳，也更省心。</p>
+        <div class="section-label">About</div>
+        <h2>关于我</h2>
+        <p class="muted">我是木星记studio创始人，也是以婚礼与关系记录为核心的摄影师。</p>
+        <p class="muted">主要拍摄沈阳婚礼跟拍、沈阳领证跟拍、订婚和答谢宴，也可以根据档期承接异地婚礼摄影。</p>
+        <p class="muted">我更在意的，不只是“有没有拍到”，而是照片里有没有情绪、有没有关系感、有没有属于你们自己的氛围。</p>
+        <p class="muted">很多新人在挑婚礼摄影师时，会先比较价格、精修数量和拍摄时长。但真正到了婚礼当天，更关键的常常是摄影师稳不稳、会不会引导、能不能理解现场，也能不能让你更省心。</p>
       </div>
     </section>
 
-    <section class="section">
-      <h2>拍摄内容</h2>
-      <div class="service-list">
-        <div class="service-item">婚礼跟拍</div>
-        <div class="service-item">领证跟拍</div>
-        <div class="service-item">订婚 / 答谢宴</div>
-        <div class="service-item">胶片记录</div>
+    <section class="section" id="why">
+      <div class="grid-2">
+        <div class="trust-card">
+          <div class="small-label">给正在比价的新人</div>
+          <h2>选婚礼摄影师，不只是看价格、精修和时长</h2>
+          <p class="quote">
+            婚礼当天没有重来一次的机会。很多时候，比起“便宜一点”，更重要的是摄影师出片稳不稳、会不会自然引导、能不能理解你在意的情绪和关系、能不能让你当天更省心。
+          </p>
+        </div>
+
+        <div class="proof-card">
+          <div class="small-label">你最终买到的，其实不只是照片</div>
+          <h3>更稳定的出片、更舒服的体验、更少的慌乱</h3>
+          <ul class="mini-list">
+            <li>婚礼当天节奏快，更需要摄影师判断准确、执行稳定</li>
+            <li>不会摆动作也没关系，自然引导比硬摆拍更重要</li>
+            <li>拍摄前提前沟通流程、场地和重点人物，当天会轻松很多</li>
+            <li>好的婚礼照片，不只是好看，也要有关系、有情绪、有回看价值</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>部分作品</h2>
+    <section class="section" id="services">
+      <div class="section-head">
+        <div class="section-label">Services</div>
+        <h2>拍摄内容</h2>
+        <p>不管是婚礼当天、领证纪念、订婚仪式还是答谢宴，我都更偏向自然记录，尽量保留真实互动和现场感。</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="service-card">
+          <div class="service-tagline">Wedding</div>
+          <h3>沈阳婚礼跟拍</h3>
+          <p>适合婚礼晨袍、接亲、仪式、合影、外景、宴会等全流程记录。重点不是机械记录流程，而是把当天的情绪变化、家人朋友互动和氛围完整留下来。</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-tagline">Registry</div>
+          <h3>领证跟拍</h3>
+          <p>适合喜欢自然、轻松、不想太摆拍的新人。更注重互动感、松弛感和纪念意义，让领证照片既好看也真实。</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-tagline">Ceremony</div>
+          <h3>订婚 / 答谢宴记录</h3>
+          <p>适合订婚宴、家宴、答谢宴、小型仪式等场景。会更重视重点人物、真实关系和现场氛围的记录。</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-tagline">Film Mood</div>
+          <h3>胶片记录</h3>
+          <p>如果你喜欢更有颗粒感、氛围感和纪念意味的画面，也可以提前沟通胶片拍摄方案。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fit">
+      <div class="section-head">
+        <div class="section-label">Who It Fits</div>
+        <h2>更适合这样的新人</h2>
+        <p>如果你想要的不是模板化婚礼照，而是更真实、更耐看、更有情绪的记录方式，这会更适合我。</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="fit-card">
+          <h3>不喜欢太重摆拍</h3>
+          <p>更想拍得自然、松弛、有互动感，而不是一直被要求刻意摆动作。</p>
+        </div>
+        <div class="fit-card">
+          <h3>不只想要“好看”</h3>
+          <p>也在意照片里的人物关系、现场氛围，以及当天真实发生过的情绪。</p>
+        </div>
+        <div class="fit-card">
+          <h3>重视婚礼当天体验</h3>
+          <p>希望摄影师沟通顺、节奏稳、能理解现场，不想因为拍摄让婚礼当天更乱。</p>
+        </div>
+        <div class="fit-card">
+          <h3>想把重要的人和瞬间留下来</h3>
+          <p>除了新人本身，也重视家人、朋友、细节和整场婚礼的整体记忆感。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-head">
+        <div class="section-label">Process</div>
+        <h2>拍摄流程</h2>
+        <p>流程清楚、沟通顺畅，婚礼当天就会轻松很多。</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="process-card">
+          <h3>01｜咨询档期</h3>
+          <p>你可以直接联系我，把婚期、城市、婚礼形式和大致需求发给我，我先帮你确认档期。</p>
+        </div>
+        <div class="process-card">
+          <h3>02｜沟通重点</h3>
+          <p>包括婚礼流程、场地情况、拍摄重点、喜欢的感觉，以及必须记录的人和瞬间。</p>
+        </div>
+        <div class="process-card">
+          <h3>03｜婚礼当天拍摄</h3>
+          <p>我会根据现场节奏完成记录，在需要的时候进行自然引导，尽量兼顾画面质感和现场体验。</p>
+        </div>
+        <div class="process-card">
+          <h3>04｜后期交付</h3>
+          <p>拍摄后统一整理与筛选，按约定完成后期和交付，让你能更安心地等待成片。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="works">
+      <div class="section-head">
+        <div class="section-label">Portfolio</div>
+        <h2>部分作品</h2>
+        <p>这些画面主要偏向自然互动、婚礼情绪、人物关系和现场氛围的记录方式。</p>
+      </div>
+
       <div class="gallery">
         <div class="gallery-item">
-          <img src="images/01.jpg" alt="婚礼摄影作品 1" />
+          <img src="images/01.jpg" alt="沈阳婚礼摄影作品，婚礼现场新人的自然互动与情绪抓拍" />
         </div>
         <div class="gallery-item">
-          <img src="images/02.jpg" alt="婚礼摄影作品 2" />
+          <img src="images/02.jpg" alt="领证跟拍作品，新人在登记日的自然互动瞬间" />
         </div>
         <div class="gallery-item">
-          <img src="images/03.jpg" alt="婚礼摄影作品 3" />
+          <img src="images/03.jpg" alt="婚礼仪式现场摄影作品，记录新人和家人的真实情绪" />
         </div>
         <div class="gallery-item">
-          <img src="images/04.jpg" alt="婚礼摄影作品 4" />
+          <img src="images/04.jpg" alt="婚礼外景摄影作品，偏自然风格的新人纪实画面" />
         </div>
         <div class="gallery-item">
-          <img src="images/05.jpg" alt="婚礼摄影作品 5" />
+          <img src="images/05.jpg" alt="婚礼跟拍作品，记录婚礼当天细节与现场氛围" />
         </div>
         <div class="gallery-item">
-          <img src="images/06.jpg" alt="婚礼摄影作品 6" />
+          <img src="images/06.jpg" alt="订婚或答谢宴摄影作品，重点记录真实关系与互动感" />
         </div>
         <div class="gallery-item">
-          <img src="images/07.jpg" alt="婚礼摄影作品 7" />
+          <img src="images/07.jpg" alt="婚礼纪实摄影作品，现场光影与人物情绪的结合" />
         </div>
         <div class="gallery-item">
-          <img src="images/08.jpg" alt="婚礼摄影作品 8" />
+          <img src="images/08.jpg" alt="沈阳婚礼摄影客片，偏松弛自然的婚礼记录风格" />
         </div>
         <div class="gallery-item">
-          <img src="images/09.jpg" alt="婚礼摄影作品 9" />
+          <img src="images/09.jpg" alt="婚礼跟拍客片，记录婚礼当天温柔且真实的瞬间" />
         </div>
+      </div>
+
+      <div class="gallery-copy">
+        <div class="small-label">我的拍摄方式</div>
+        <h3>照片不只是“拍到”，而是把真正重要的东西留下来</h3>
+        <p>
+          如果你在找的是沈阳婚礼摄影师，或者正在看沈阳婚礼跟拍、沈阳领证跟拍这类服务，可能最在意的并不只是照片数量，而是照片是不是自然、是不是有情绪、是不是能把当天最重要的人和关系好好留下来。我的拍摄会更偏向这些方向。
+        </p>
       </div>
     </section>
 
     <section class="section">
-      <h2>联系我</h2>
+      <div class="consult-card">
+        <div class="small-label">联系前你可以这样发给我</div>
+        <h2>想咨询档期，可以直接把这些信息发给我</h2>
+        <ul class="mini-list">
+          <li>婚期 / 领证日期</li>
+          <li>所在城市</li>
+          <li>婚礼形式或拍摄类型</li>
+          <li>大致流程和时间安排</li>
+          <li>你更在意的拍摄感觉：自然、纪实、情绪、质感、轻松感等</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-head">
+        <div class="section-label">FAQ</div>
+        <h2>常见问题</h2>
+        <p>把新人最常问的事情提前说清楚，也方便你更快判断我是不是适合你。</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="faq-item">
+          <h3>婚礼跟拍一般会拍哪些内容？</h3>
+          <p>通常会包括晨袍准备、接亲、仪式、合影、外景、宴会和现场互动等，具体会根据你的婚礼流程进行调整。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>我不会摆动作，适合找你拍吗？</h3>
+          <p>适合。我的拍摄方式更偏自然引导，不会一直让你刻意摆拍，更希望你们在轻松的状态里完成照片。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>只接沈阳吗？</h3>
+          <p>以沈阳婚礼摄影和辽宁本地拍摄为主，也可以接异地拍摄，具体看婚期档期和行程安排。</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>怎么预约档期？</h3>
+          <p>直接加微信 muxingjistudio，把婚期、城市和拍摄需求发给我，我会先帮你确认档期，再沟通细节。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-head">
+        <div class="section-label">Contact</div>
+        <h2>联系我</h2>
+        <p>如果你想先了解档期，或者想简单聊聊拍摄内容，可以直接联系我。</p>
+      </div>
+
       <div class="contact-box">
         <div class="contact-card">
           <div class="contact-label">微信</div>
           <div class="contact-value">muxingjistudio</div>
         </div>
+
         <div class="contact-card">
           <div class="contact-label">小红书</div>
           <div class="contact-value">木星记Am阿木木</div>
         </div>
+
         <div class="contact-card">
           <div class="contact-label">电话</div>
           <div class="contact-value">18640167950</div>
         </div>
+
         <div class="contact-card">
           <div class="contact-label">咨询说明</div>
-          <div class="contact-value" style="font-size:16px; font-weight:500; line-height:1.8;">
-            如果你想先了解档期，或者想简单聊聊拍摄内容，可以直接联系我。
+          <div class="contact-note">
+            建议你联系时直接告诉我婚期、城市、婚礼形式，以及你更在意的拍摄感觉。这样我可以更快判断档期，也更方便给你更准确的沟通建议。
           </div>
         </div>
+      </div>
+
+      <div class="footer-cta cta-row">
+        <a class="btn btn-primary" href="#contact">我已经准备好咨询</a>
+        <a class="btn btn-secondary" href="#works">再看一遍作品</a>
       </div>
     </section>
 
     <footer>
-      © 木星记studio · 摄影师Am阿木木
+      © 木星记studio · 摄影师Am阿木木 ｜ 沈阳婚礼摄影 / 领证跟拍 / 订婚答谢宴记录
     </footer>
+  </main>
+
+  <div class="sticky-mobile-cta">
+    <a class="btn btn-primary" href="#contact">联系我</a>
+    <a class="btn btn-secondary" href="#works">看作品</a>
   </div>
 </body>
 </html>
