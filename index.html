@@ -172,76 +172,6 @@
       max-width: 760px;
     }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0 18px;
-      border-radius: 999px;
-      font-size: 15px;
-      font-weight: 650;
-      border: 1px solid transparent;
-      transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.96;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 10px 24px rgba(31, 27, 23, 0.14);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.88);
-      color: var(--accent);
-      border-color: var(--line);
-    }
-
-    .hero-contact {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .hero-contact .pill {
-      background: rgba(255,255,255,0.92);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 13px 14px;
-      min-height: 72px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-shadow: var(--shadow);
-    }
-
-    .pill-label {
-      font-size: 12px;
-      color: var(--soft);
-      margin-bottom: 4px;
-    }
-
-    .pill-value {
-      font-size: 14px;
-      font-weight: 650;
-      color: #51493f;
-      word-break: break-all;
-    }
-
     .section {
       padding: 22px 0 12px;
     }
@@ -406,6 +336,44 @@
       color: #4f493f;
     }
 
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 650;
+      border: 1px solid transparent;
+      transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(31, 27, 23, 0.14);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.88);
+      color: var(--accent);
+      border-color: var(--line);
+    }
+
     .footer-cta {
       margin-top: 8px;
     }
@@ -472,8 +440,7 @@
 
       .grid-2,
       .gallery,
-      .contact-box,
-      .hero-contact {
+      .contact-box {
         grid-template-columns: 1fr;
       }
 
@@ -499,10 +466,6 @@
       .btn {
         width: 100%;
         min-height: 50px;
-      }
-
-      .hero-contact .pill {
-        min-height: auto;
       }
 
       .gallery-item img {
@@ -564,16 +527,12 @@
           <div class="brand-sub">摄影师 Am阿木木 · 沈阳婚礼摄影 / 领证跟拍 / 异地可接</div>
         </div>
 
-        <nav class="nav" aria-label="页面导航">
-          <a href="#about">关于我</a>
-          <a href="#services">拍摄内容</a>
-          <a href="#why">为什么选我</a>
-          <a href="#fit">适合谁</a>
-          <a href="#process">拍摄流程</a>
-          <a href="#works">部分作品</a>
-          <a href="#faq">常见问题</a>
-          <a href="#contact">联系我</a>
-        </nav>
+    <nav class="nav" aria-label="页面导航">
+  <a href="#about">关于我</a>
+  <a href="#works">作品</a>
+  <a href="#faq">常见问题</a>
+  <a href="#contact">联系我</a>
+</nav>
       </div>
     </div>
   </div>
@@ -589,26 +548,6 @@
           <p class="lead">
             婚礼跟拍、领证跟拍、订婚和答谢宴记录。偏自然、纪实、重情绪，也可承接异地拍摄。
           </p>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#contact">查看联系方式</a>
-            <a class="btn btn-secondary" href="#works">先看部分作品</a>
-          </div>
-
-          <div class="hero-contact">
-            <div class="pill">
-              <div class="pill-label">微信</div>
-              <div class="pill-value">muxingjistudio</div>
-            </div>
-            <div class="pill">
-              <div class="pill-label">小红书</div>
-              <div class="pill-value">木星记Am阿木木</div>
-            </div>
-            <div class="pill">
-              <div class="pill-label">电话</div>
-              <div class="pill-value">18640167950</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -617,7 +556,7 @@
       <div class="card">
         <div class="section-label">About</div>
         <h2>关于我</h2>
-        <p class="muted">我是Am阿木木，是木星记studio创始人，也是以婚礼与关系记录为核心的摄影师。</p>
+        <p class="muted">我是木星记studio创始人，也是以婚礼与关系记录为核心的摄影师。</p>
         <p class="muted">主要拍摄沈阳婚礼跟拍、沈阳领证跟拍、订婚和答谢宴，也可以根据档期承接异地婚礼摄影。</p>
         <p class="muted">我更在意的，不只是“有没有拍到”，而是照片里有没有情绪、有没有关系感、有没有属于你们自己的氛围。</p>
         <p class="muted">很多新人在挑婚礼摄影师时，会先比较价格、精修数量和拍摄时长。但真正到了婚礼当天，更关键的常常是摄影师稳不稳、会不会引导、能不能理解现场，也能不能让你更省心。</p>
